@@ -10,7 +10,7 @@ const Layout = ({children}: IProps): JSX.Element => {
 	return (
 		<>
 			<Navbar />
-			<div className='flex min-h-screen justify-center' data-testid='layout-1'>
+			<div className='flex min-h-screen justify-center bg-black' data-testid='layout-1'>
 				{children}
 			</div>
 			<Footer />

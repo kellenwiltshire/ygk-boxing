@@ -1,16 +1,11 @@
 import {useState} from 'react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import {Dialog} from '@headlessui/react'
-
-const navigation = [
-	{name: 'Product', href: '#'},
-	{name: 'Features', href: '#'},
-	{name: 'Marketplace', href: '#'},
-	{name: 'Company', href: '#'},
-]
+import {navigation} from '../../utils/Consts/Layout/navigation'
+import {INavProps} from '../../utils/types/LayoutTypes'
 
 const Navbar = () => {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
 	return <header className='absolute inset-x-0 top-0 z-50'>
 		<nav className='flex items-center justify-between p-6 lg:px-8' aria-label='Global'>
 			<div className='flex lg:flex-1'>
@@ -34,7 +29,7 @@ const Navbar = () => {
 				</button>
 			</div>
 			<div className='hidden lg:flex lg:gap-x-12'>
-				{navigation.map((item) => (
+				{navigation.map((item: INavProps) => (
 					<a key={item.name} href={item.href} className='text-sm font-semibold leading-6 text-white'>
 						{item.name}
 					</a>

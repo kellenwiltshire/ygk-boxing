@@ -1,6 +1,7 @@
 import React from 'react'
+import {ISocialIconProps} from '../../types/LayoutTypes'
 
-export const socialIcons = [
+export const socialIcons: Array<ISocialIconProps> = [
 	{
 		name: 'Facebook',
 		href: '#',

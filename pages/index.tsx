@@ -1,7 +1,11 @@
+import Hero from '../components/home/Hero'
+import Coaches from '../components/home/Coaches'
+
 const Home = () => {
 	return (
-		<div className='flex min-h-screen flex-col items-center justify-center py-2'>
-
+		<div className='w-full'>
+			<Hero />
+			<Coaches />
 		</div>
 	)
 }

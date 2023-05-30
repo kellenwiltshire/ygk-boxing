@@ -5,3 +5,11 @@ export interface IDay {
 		time: string
 	}[]
 }
+
+export interface ITiers {
+	name: string
+	description: string
+	id: string
+	price: string
+	mostPopular: boolean
+}

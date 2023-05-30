@@ -6,13 +6,13 @@ import {INavProps} from '../../utils/types/LayoutTypes'
 
 const Navbar = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false)
-	return <header className='absolute inset-x-0 top-0 z-50'>
-		<nav className='flex items-center justify-between p-6 lg:px-8' aria-label='Global'>
-			<div className='flex lg:flex-1'>
+	return <header className='bg-black text-white'>
+		<nav className='flex items-center justify-between p-6 lg:px-8 w-full' aria-label='Global'>
+			<div className='flex justify-self-start'>
 				<a href='#' className='-m-1.5 p-1.5'>
 					<span className='sr-only'>Your Company</span>
 					<img
-						className='h-8 w-auto'
+						className='h-8'
 						src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
 						alt='YGK Boxing'
 					/>
@@ -28,18 +28,16 @@ const Navbar = () => {
 					<Bars3Icon className='h-6 w-6' aria-hidden='true' />
 				</button>
 			</div>
-			<div className='hidden lg:flex lg:gap-x-12'>
-				{navigation.map((item: INavProps) => (
-					<a key={item.name} href={item.href} className='text-sm font-semibold leading-6 text-white'>
-						{item.name}
-					</a>
-				))}
+			<div className='hidden lg:flex flex-1 justify-center'>
+				<div className='flex lg:gap-x-12'>
+					{navigation.map((item: INavProps) => (
+						<a key={item.name} href={item.href} className='text-sm font-semibold leading-6 text-white'>
+							{item.name}
+						</a>
+					))}
+				</div>
 			</div>
-			<div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-				<a href='#' className='text-sm font-semibold leading-6 text-white'>
-					Log in <span aria-hidden='true'>&rarr;</span>
-				</a>
-			</div>
+
 		</nav>
 		<Dialog as='div' className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
 			<div className='fixed inset-0 z-50' />
@@ -76,14 +74,7 @@ const Navbar = () => {
 								</a>
 							))}
 						</div>
-						<div className='py-6'>
-							<a
-								href='#'
-								className='-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800'
-							>
-								Log in
-							</a>
-						</div>
+
 					</div>
 				</div>
 			</Dialog.Panel>

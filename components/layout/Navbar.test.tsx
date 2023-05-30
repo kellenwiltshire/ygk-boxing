@@ -10,10 +10,5 @@ describe('Navbar', () => {
 		expect(logo).toBeInTheDocument()
 	})
 
-	test('renders login', () => {
-		render(<Navbar />)
-
-		const loginText = screen.getByText('Log in')
-		expect(loginText).toBeInTheDocument()
-	})
+	
 })

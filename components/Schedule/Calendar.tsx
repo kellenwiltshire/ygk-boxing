@@ -1,49 +1,17 @@
 import {IDay} from '../../utils/types/ScheduleTypes'
 import {classNames} from '../../utils/helpers/classNames'
 import dayjs from 'dayjs'
+import {events} from './Vars/Events'
 
-const events: Array<IDay> = [
-	{
-		dayOfWeek: 'Sunday',
-		events: [],
-	},
-	{
-		dayOfWeek: 'Monday', events: [
-			{
-				name: 'Box and Burn (Boxing inspired cardio workout)',
-				time: '12:00pm - 1:00pm',
-			},
-			{
-				name: 'Kids Class (Open for kids aged 7 - 12)',
-				time: '4:30pm - 5:45pm',
-			},
-			{
-				name: 'Warmup for Adult Boxing Class',
-				time: '6:00pm - 6:15pm',
-			},
-			{
-				name: 'Adult Boxing Class (Ages 13+)',
-				time: '6:15pm - 7:15pm',
-			},
-			{
-				name: 'Open Gym (sparring, pads, stretching, personal workouts)',
-				time: '7:15pm - 8:00pm',
-			}],
-	},
-	{
-		dayOfWeek: 'Tuesday',
-		events: [],
-	},
-]
 
 const currDay: number = dayjs().day()
 
 const Calendar = () => {
 	return (
-		<div className='lg:flex lg:h-full lg:flex-col'>
+		<div className='lg:flex lg:h-full lg:flex-col max-w-7xl'>
 			<header className='flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none'>
 				<h1 className='text-base font-semibold leading-6 text-white'>
-					<time dateTime='2022-01'>June 2023</time>
+					<time dateTime='2023-06'>June 2023</time>
 				</h1>
 
 			</header>
@@ -81,94 +49,32 @@ const Calendar = () => {
 									index === currDay ? 'bg-gray-100' : 'bg-white',
 									'relative px-3 py-2',
 								)}
+								data-testid='calendar-day'
 							>
-
 								{day.events.length > 0 && (
 									<ol className='mt-2 divide-y-2 divide-y-gray-500'>
 										{day.events.map((event) => (
 											<li key={event.name}>
-												<div className='group flex'>
-													<p className='flex-auto font-medium text-gray-900 group-hover:text-indigo-600'>
-														{event.name}
-													</p>
+												<div className='group flex flex-col'>
 													<time
 														dateTime={event.time}
-														className='ml-3 hidden flex-none text-gray-500 group-hover:text-indigo-600 xl:block'
+														className='flex-none text-gray-500 block'
 													>
 														{event.time}
 													</time>
+													<p className='ml-3 flex-auto font-medium text-gray-900'>
+														{event.name}
+													</p>
 												</div>
 											</li>
 										))}
-
 									</ol>
 								)}
 							</div>
 						))}
 					</div>
-					{/*<div className='isolate grid w-full grid-cols-7 grid-rows-6 gap-px lg:hidden'>*/}
-					{/*	{events.map((day) => (*/}
-					{/*		<button*/}
-					{/*			key={day.date}*/}
-					{/*			type='button'*/}
-					{/*			className={classNames(*/}
-					{/*				day.isCurrentMonth ? 'bg-white' : 'bg-gray-50',*/}
-					{/*				(day.isSelected || day.isToday) && 'font-semibold',*/}
-					{/*				day.isSelected && 'text-white',*/}
-					{/*				!day.isSelected && day.isToday && 'text-indigo-600',*/}
-					{/*				!day.isSelected && day.isCurrentMonth && !day.isToday && 'text-gray-900',*/}
-					{/*				!day.isSelected && !day.isCurrentMonth && !day.isToday && 'text-gray-500',*/}
-					{/*				'flex h-14 flex-col px-3 py-2 hover:bg-gray-100 focus:z-10',*/}
-					{/*			)}*/}
-					{/*		>*/}
-					{/*			<time*/}
-					{/*				dateTime={day.date}*/}
-					{/*				className={classNames(*/}
-					{/*					day.isSelected && 'flex h-6 w-6 items-center justify-center rounded-full',*/}
-					{/*					day.isSelected && day.isToday && 'bg-indigo-600',*/}
-					{/*					day.isSelected && !day.isToday && 'bg-gray-900',*/}
-					{/*					'ml-auto',*/}
-					{/*				)}*/}
-					{/*			>*/}
-					{/*				{day.date.split('-').pop().replace(/^0/, '')}*/}
-					{/*			</time>*/}
-					{/*			<span className='sr-only'>{day.events.length} events</span>*/}
-					{/*			{day.events.length > 0 && (*/}
-					{/*				<span className='-mx-0.5 mt-auto flex flex-wrap-reverse'>*/}
-					{/*          {day.events.map((event) => (*/}
-					{/*						<span key={event.id} className='mx-0.5 mb-1 h-1.5 w-1.5 rounded-full bg-gray-400' />*/}
-					{/*					))}*/}
-					{/*        </span>*/}
-					{/*			)}*/}
-					{/*		</button>*/}
-					{/*	))}*/}
-					{/*</div>*/}
 				</div>
 			</div>
-			{/*{selectedDay?.events.length > 0 && (*/}
-			{/*	<div className='px-4 py-10 sm:px-6 lg:hidden'>*/}
-			{/*		<ol*/}
-			{/*			className='divide-y divide-gray-100 overflow-hidden rounded-lg bg-white text-sm shadow ring-1 ring-black ring-opacity-5'>*/}
-			{/*			{selectedDay.events.map((event) => (*/}
-			{/*				<li key={event.id} className='group flex p-4 pr-6 focus-within:bg-gray-50 hover:bg-gray-50'>*/}
-			{/*					<div className='flex-auto'>*/}
-			{/*						<p className='font-semibold text-gray-900'>{event.name}</p>*/}
-			{/*						<time dateTime={event.datetime} className='mt-2 flex items-center text-gray-700'>*/}
-			{/*							<ClockIcon className='mr-2 h-5 w-5 text-gray-400' aria-hidden='true' />*/}
-			{/*							{event.time}*/}
-			{/*						</time>*/}
-			{/*					</div>*/}
-			{/*					<a*/}
-			{/*						href={event.href}*/}
-			{/*						className='ml-6 flex-none self-center rounded-md bg-white px-3 py-2 font-semibold text-gray-900 opacity-0 shadow-sm ring-1 ring-inset ring-gray-300 hover:ring-gray-400 focus:opacity-100 group-hover:opacity-100'*/}
-			{/*					>*/}
-			{/*						Edit<span className='sr-only'>, {event.name}</span>*/}
-			{/*					</a>*/}
-			{/*				</li>*/}
-			{/*			))}*/}
-			{/*		</ol>*/}
-			{/*	</div>*/}
-			{/*)}*/}
 		</div>
 	)
 }

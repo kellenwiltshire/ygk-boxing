@@ -1,5 +1,5 @@
-import Hero from '../components/home/Hero'
-import Coaches from '../components/home/Coaches'
+import Hero from '../components/Home/Hero'
+import Coaches from '../components/Home/Coaches'
 
 const Home = () => {
 	return (

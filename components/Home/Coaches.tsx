@@ -23,35 +23,36 @@ const people: Array<IPeople> = [
 
 const Coaches = () => {
   return (
-    <div className="py-24 sm:py-32">
+    <div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Meet our coaches</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About YGK Boxing</h2>
           <p className="mt-6 text-lg leading-8">
-            The Youth Group Kingston Boxing Club&apos;s vision focuses on the positive development of youth, adults and
-            seniors through exercise, confidence, and better self-worth. YGK Boxing is for anyone that wants to learn
-            the fundamentals of boxing while achieving their own fitness goals. YGK Boxing operates a safe boxing club
-            through Boxing Ontario where youth, adults and seniors will be able to spend their time in a positive
-            environment with knowledgeable coaches having fun, gaining confidence and making friends. At YGK Boxing Club
-            we cultivate an inclusive environment by considering all dimensions of physical and mental diversity. Exceed
-            your expectations by joining YGK Boxing today!
+            Since January 2018 YGK Boxing has been Kingstons distinctive boxing headquarters for boxing training and
+            competition.The Youth Group Kingston Boxing Club&apos;s vision focuses on the positive development of youth,
+            adults and seniors through exercise, confidence, and better self-worth. YGK Boxing is for anyone that wants
+            to learn the fundamentals of boxing while achieving their own fitness goals. YGK Boxing operates a safe
+            boxing club through Boxing Ontario where youth, adults and seniors will be able to spend their time in a
+            positive environment with knowledgeable coaches having fun, gaining confidence and making friends. At YGK
+            Boxing Club we cultivate an inclusive environment by considering all dimensions of physical and mental
+            diversity. Exceed your expectations by joining YGK Boxing today!
           </p>
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-20 flex flex-col max-w-2xl gap-y-20 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
-        >
-          {people.map((person: IPeople) => (
-            <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
-              <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={person.imageUrl} alt="" />
-              <div className="flex-auto">
-                <h3 className="text-lg font-semibold leading-8 tracking-tight">{person.name}</h3>
-                <p className="text-base leading-7">{person.role}</p>
-                <p className="mt-6 text-base leading-7">{person.bio}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        {/*<ul*/}
+        {/*  role="list"*/}
+        {/*  className="mx-auto mt-20 flex flex-col max-w-2xl gap-y-20 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"*/}
+        {/*>*/}
+        {/*  {people.map((person: IPeople) => (*/}
+        {/*    <li key={person.name} className="flex flex-col gap-6 xl:flex-row">*/}
+        {/*      <img className="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src={person.imageUrl} alt="" />*/}
+        {/*      <div className="flex-auto">*/}
+        {/*        <h3 className="text-lg font-semibold leading-8 tracking-tight">{person.name}</h3>*/}
+        {/*        <p className="text-base leading-7">{person.role}</p>*/}
+        {/*        <p className="mt-6 text-base leading-7">{person.bio}</p>*/}
+        {/*      </div>*/}
+        {/*    </li>*/}
+        {/*  ))}*/}
+        {/*</ul>*/}
       </div>
     </div>
   );

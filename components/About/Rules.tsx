@@ -11,7 +11,7 @@ const rulesList: Array<IRule> = [
   "Respect the coaches, club and other members because everyone is here for a different reason, please take your training seriously!",
   "We work, train and fight with a team mentality and no one is in it for themselves.",
   "No gum chewing.",
-  "No jewelry to be worn that may cause injury to other members.",
+  "No jewellery to be worn that may cause injury to other members.",
   "Safely put away the equipment after use.",
   "No mobile phones or camera devices to be used to be used during the workout unless given permission.",
   "Sparring requires proper fitting shoes, headgear, mouth guard, 16 oz gloves and shirt, jock for men, signed liability waiver, and approval from coaches (no exceptions).",
@@ -20,7 +20,7 @@ const rulesList: Array<IRule> = [
 ];
 
 const Rules = () => {
-  return <div className="max-w-5xl">
+  return <div className="max-w-7xl py-20">
     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl text-center mb-4">
       YGK Boxing Rules
     </h2>

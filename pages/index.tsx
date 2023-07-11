@@ -1,12 +1,10 @@
-import Hero from '../components/Home/Hero'
-import Coaches from '../components/Home/Coaches'
+import Hero from "../components/Home/Hero";
 
 const Home = () => {
-	return (
-		<div className='w-full'>
-			<Hero />
-			<Coaches />
-		</div>
-	)
-}
-export default Home
+  return (
+    <div className="w-full">
+      <Hero />
+    </div>
+  );
+};
+export default Home;

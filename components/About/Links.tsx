@@ -20,7 +20,7 @@ const linkList: Array<ILink> = [
 ];
 
 const Links = () => {
-  return <div className="max-w-5xl">
+  return <div className="max-w-7xl">
     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl text-center mb-4">
       Links
     </h2>

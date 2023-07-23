@@ -1,20 +1,47 @@
-import {IProduct} from '../../../utils/types/StoreTypes'
-import ProductInfo from '../../../components/Store/ProductInfo'
+import ProductInfo from "../../../components/Store/ProductInfo";
+import client from "../../../square.connect";
+import { ApiResponse, CatalogObject, ListCatalogResponse, RetrieveCatalogObjectResponse } from "square";
+import { ICatalogObject } from "../../../utils/types/CatalogTypes";
+import JSONBig from "json-bigint";
 
-const product: IProduct = {
-	id: 1,
-	name: 'Basic Tee 8-Pack',
-	href: '/store/product/1',
-	price: '$256',
-	description: 'Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.',
-	options: '8 colors',
-	imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-01.jpg',
-	imageAlt: 'Eight shirts arranged on table in black, olive, grey, blue, white, red, mustard, and green.',
+interface IProps {
+  product: ICatalogObject;
 }
 
-const ProductPage = () => {
-	return (
-		<ProductInfo product={product} />
-	)
+const ProductPage = ({ product }: IProps) => {
+  return (
+    <ProductInfo product={product} />
+  );
+};
+export default ProductPage;
+
+export async function getStaticPaths() {
+  const response: ApiResponse<ListCatalogResponse> = await client.catalogApi.listCatalog();
+  if (response.result.objects) {
+    const products: Array<CatalogObject> = response.result.objects.filter(obj => obj.itemData);
+    const paths = products.map(product => {
+      return {
+        params: {
+          slug: product.id
+        }
+      };
+    });
+    return {
+      paths: paths,
+      fallback: true
+    };
+  }
 }
-export default ProductPage
+
+export async function getStaticProps({ params }) {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    const response: ApiResponse<RetrieveCatalogObjectResponse> = await client.catalogApi.retrieveCatalogObject(params.slug);
+    return {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      props: { product: JSONBig.parse(JSONBig.stringify(response.result.object)) }
+    };
+  } catch (e) {
+    throw new Error("Unable to retrieve catalog object");
+  }
+}

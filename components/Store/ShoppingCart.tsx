@@ -61,6 +61,9 @@ const ShoppingCart = () => {
                       <a href={product.href}>{product.name}</a>
                     </h3>
                     <p className="text-gray-500">{product.price}</p>
+                    <button className="text-black">
+                      Remove
+                    </button>
                   </div>
                 </li>
               ))}

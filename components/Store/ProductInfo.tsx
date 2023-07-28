@@ -1,10 +1,27 @@
 import { ICatalogObject } from "../../utils/types/CatalogTypes";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { updateCart } from "../../redux/cartSlice";
+import React from "react";
 
 interface IProps {
   product: ICatalogObject;
 }
 
 const ProductInfo = ({ product }: IProps) => {
+  const dispatch = useAppDispatch();
+  const { cart } = useAppSelector(state => state);
+
+  const addToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const item = {
+      catalogObjectId: product.id,
+      name: product.itemData.name,
+      priceMoney: product.itemData.variations[0].itemVariationData.priceMoney.amount
+    };
+    dispatch(updateCart({
+      items: [...cart.items, item]
+    }));
+  };
   return <div>
     <div
       className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -35,19 +52,12 @@ const ProductInfo = ({ product }: IProps) => {
       {/* Product form */}
       <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
         <section aria-labelledby="options-heading">
-          <h2 id="options-heading" className="sr-only">
-            Product options
-          </h2>
-          <form>
-            <div className="mt-10">
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-              >
-                Add to bag
-              </button>
-            </div>
-          </form>
+          <button
+            onClick={(e) => addToCart(e)}
+            className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+          >
+            Add to bag
+          </button>
         </section>
       </div>
     </div>

@@ -4,9 +4,12 @@ import { Dialog } from "@headlessui/react";
 import { navigation } from "../../utils/Consts/Layout/navigation";
 import { INavProps } from "../../utils/types/LayoutTypes";
 import ShoppingCart from "../Store/ShoppingCart";
+import { useAppSelector } from "../../redux/hooks";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const { cart } = useAppSelector(state => state);
+  console.log(cart);
   return <header className="bg-black text-white">
     <nav className="flex items-center justify-between p-6 lg:px-8 w-full" aria-label="Global">
       <div className="flex justify-self-start">
@@ -40,7 +43,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex justify-self-end">
-        <ShoppingCart />
+        {(cart.items.length > 0) &&
+          <ShoppingCart />
+        }
       </div>
 
     </nav>
@@ -79,7 +84,9 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            <ShoppingCart />
+            {(cart.items.length > 0) &&
+              <ShoppingCart />
+            }
           </div>
         </div>
       </Dialog.Panel>

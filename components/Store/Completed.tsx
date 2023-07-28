@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const products = [
   {
@@ -77,10 +78,10 @@ const Completed = () => {
               </dl>
 
               <div className="mt-16 border-t border-gray-200 py-6 text-right">
-                <a href="/store" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                <Link href="/store" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
                   Continue Shopping
                   <span aria-hidden="true"> &rarr;</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

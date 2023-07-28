@@ -35,10 +35,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-member-access
     const response: ApiResponse<RetrieveCatalogObjectResponse> = await client.catalogApi.retrieveCatalogObject(params.slug);
     return {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
       props: { product: JSONBig.parse(JSONBig.stringify(response.result.object)) }
     };
   } catch (e) {

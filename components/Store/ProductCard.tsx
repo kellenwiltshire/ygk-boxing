@@ -25,7 +25,7 @@ const ProductCard = ({ product }: IProps) => {
       <p className="text-sm text-gray-500">Description</p>
       <div className="flex flex-1 flex-col justify-end">
         <p
-          className="text-base font-medium text-gray-900">{(product.itemData.variations[0].itemVariationData.priceMoney.amount / 100).toFixed(2)}</p>
+          className="text-base font-medium text-gray-900">${(product.itemData.variations[0].itemVariationData.priceMoney.amount / 100).toFixed(2)}</p>
       </div>
     </div>
   </Link>;

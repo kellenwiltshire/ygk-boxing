@@ -12,13 +12,18 @@ const ProductPage = ({ product }: IProps) => {
   return (
     <ProductInfo product={product} />
   );
+
 };
 export default ProductPage;
 
 export async function getStaticPaths() {
-  const response: ApiResponse<ListCatalogResponse> = await client.catalogApi.listCatalog();
+  const response: ApiResponse<ListCatalogResponse> = await client.catalogApi.listCatalog(undefined, "ITEM");
   if (response.result.objects) {
-    const products: Array<CatalogObject> = response.result.objects.filter(obj => obj.itemData);
+    const products: Array<CatalogObject> = response.result.objects.filter(obj => {
+      if (obj.itemData !== undefined) {
+        return obj;
+      }
+    });
     const paths = products.map(product => {
       return {
         params: {
@@ -27,7 +32,7 @@ export async function getStaticPaths() {
       };
     });
     return {
-      paths: paths,
+      paths,
       fallback: true
     };
   }
@@ -37,10 +42,13 @@ export async function getStaticProps({ params }) {
   try {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument,@typescript-eslint/no-unsafe-member-access
     const response: ApiResponse<RetrieveCatalogObjectResponse> = await client.catalogApi.retrieveCatalogObject(params.slug);
-    return {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
-      props: { product: JSONBig.parse(JSONBig.stringify(response.result.object)) }
-    };
+
+    if (response.result.object?.itemData) {
+      return {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment
+        props: { product: JSONBig.parse(JSONBig.stringify(response.result.object)) }
+      };
+    }
   } catch (e) {
     throw new Error("Unable to retrieve catalog object");
   }

@@ -1,7 +1,7 @@
 import { ICatalogObject } from "../../utils/types/CatalogTypes";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { updateCart } from "../../redux/cartSlice";
+import { useAppDispatch } from "../../redux/hooks";
 import React from "react";
+import { addToCart } from "../../redux/cartSlice";
 
 interface IProps {
   product: ICatalogObject;
@@ -9,26 +9,27 @@ interface IProps {
 
 const ProductInfo = ({ product }: IProps) => {
   const dispatch = useAppDispatch();
-  const { cart } = useAppSelector(state => state);
 
-  const addToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const addItemToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const item = {
-      catalogObjectId: product.id,
+      quantity: 1,
+      catalogObjectId: product.itemData.variations[0].id,
       name: product.itemData.name,
-      priceMoney: product.itemData.variations[0].itemVariationData.priceMoney.amount
+      basePriceMoney: {
+        priceMoney: product.itemData.variations[0].itemVariationData.priceMoney.amount,
+        currency: "CAD"
+      }
     };
-    dispatch(updateCart({
-      items: [...cart.items, item]
-    }));
+    dispatch(addToCart(item));
   };
-  return <div>
+  return <div className="w-full">
     <div
       className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
       {/* Product Information */}
       <div>
         <div className="mt-4">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{product.itemData.name}</h1>
+          <h1 className="text-3xl text-left font-bold tracking-tight sm:text-4xl">{product.itemData.name}</h1>
         </div>
         <section aria-labelledby="information-heading" className="mt-4">
           <h2 id="information-heading" className="sr-only">
@@ -53,7 +54,7 @@ const ProductInfo = ({ product }: IProps) => {
       <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
         <section aria-labelledby="options-heading">
           <button
-            onClick={(e) => addToCart(e)}
+            onClick={(e) => addItemToCart(e)}
             className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
           >
             Add to bag

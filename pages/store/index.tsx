@@ -20,7 +20,7 @@ export default Store;
 
 export async function getStaticProps() {
   try {
-    const response: ApiResponse<ListCatalogResponse> = await client.catalogApi.listCatalog();
+    const response: ApiResponse<ListCatalogResponse> = await client.catalogApi.listCatalog(undefined, "ITEM");
 
     const filterResponse = response.result.objects?.filter(product => product.itemData);
 

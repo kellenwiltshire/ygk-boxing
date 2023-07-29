@@ -9,7 +9,6 @@ import { useAppSelector } from "../../redux/hooks";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const { cart } = useAppSelector(state => state);
-  console.log(cart);
   return <header className="bg-black text-white">
     <nav className="flex items-center justify-between p-6 lg:px-8 w-full" aria-label="Global">
       <div className="flex justify-self-start">

@@ -1,19 +1,24 @@
 name: Build
 
 on:
-  push: 
-    branches: ["*"]
+  push:
+    branches: [ "*" ]
   pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
 
-jobs: 
+jobs:
 
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: |
-        npm install
-        npm run build
+      - uses: actions/checkout@v3
+      - name: Create Env
+        run: |
+          touch .env.local
+          echo SQUARE_ACCESS_TOKEN="${secrets.SQUARE_ACCESS_TOKEN}" >> .env.local
+          cat .env.local
+      - name: Build
+        run: |
+          npm install
+          npm run build

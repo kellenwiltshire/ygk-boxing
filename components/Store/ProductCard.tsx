@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const ProductCard = ({ product }: IProps) => {
-  return <Link href={`/store/product/${product.id}`}
+  return <Link href={{ pathname: `/store/product/[slug]`, query: { slug: product.id } }}
                key={product.id}
                className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white"
   >

@@ -4,6 +4,7 @@ import { ShoppingBagIcon } from "@heroicons/react/24/solid";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { ICartItems, removeFromCart } from "../../redux/cartSlice";
 import { calculatePrice } from "../../utils/helpers/calcPrice";
+import { ICartApiResponse } from "../../utils/types/CartTypes";
 
 const ShoppingCart = () => {
   const { cart } = useAppSelector((state) => state);
@@ -33,7 +34,7 @@ const ShoppingCart = () => {
       } else {
         return result.json();
       }
-    }).then(data => {
+    }).then((data:ICartApiResponse) => {
       window.location.href = data.paymentLink.url
     }).catch(error => {
       console.log(error);

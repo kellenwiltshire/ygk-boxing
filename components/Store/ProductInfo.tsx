@@ -2,6 +2,7 @@ import { ICatalogObject } from "../../utils/types/CatalogTypes";
 import { useAppDispatch } from "../../redux/hooks";
 import React from "react";
 import { addToCart } from "../../redux/cartSlice";
+import { calculatePrice } from "../../utils/helpers/calcPrice";
 
 interface IProps {
   product: ICatalogObject;
@@ -37,7 +38,7 @@ const ProductInfo = ({ product }: IProps) => {
           </h2>
           <div className="flex items-center">
             <p
-              className="text-lg sm:text-xl">${(product.itemData.variations[0].itemVariationData.priceMoney.amount / 100).toFixed(2)}</p>
+              className="text-lg sm:text-xl">{calculatePrice(product.itemData.variations[0].itemVariationData.priceMoney.amount)}</p>
           </div>
           <div className="mt-4 space-y-6">
             <p className="text-base">Description</p>

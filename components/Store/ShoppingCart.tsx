@@ -3,6 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { ShoppingBagIcon } from "@heroicons/react/24/solid";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { ICartItems, removeFromCart } from "../../redux/cartSlice";
+import { calculatePrice } from "../../utils/helpers/calcPrice";
 
 const ShoppingCart = () => {
   const { cart } = useAppSelector((state) => state);
@@ -33,7 +34,7 @@ const ShoppingCart = () => {
         return result.json();
       }
     }).then(data => {
-      console.log(data);
+      window.location.href = data.paymentLink.url
     }).catch(error => {
       console.log(error);
     });
@@ -60,7 +61,7 @@ const ShoppingCart = () => {
         leaveTo="opacity-0"
       >
         <Popover.Panel
-          className="absolute inset-x-0 top-16 mt-px bg-white pb-6 shadow-lg sm:px-2 lg:left-auto lg:right-0 lg:top-full lg:-mr-1.5 lg:mt-3 lg:w-80 lg:rounded-lg lg:ring-1 lg:ring-black lg:ring-opacity-5">
+          className="absolute z-50 inset-x-0 top-16 mt-px bg-white pb-6 shadow-lg sm:px-2 lg:left-auto lg:right-0 lg:top-full lg:-mr-1.5 lg:mt-3 lg:w-80 lg:rounded-lg lg:ring-1 lg:ring-black lg:ring-opacity-5">
           <h2 className="sr-only">Shopping Cart</h2>
 
           <form className="mx-auto max-w-2xl px-4">
@@ -72,7 +73,7 @@ const ShoppingCart = () => {
                     <h3 className="font-medium text-gray-900">
                       <a href={product.catalogObjectId}>{product.name}</a>
                     </h3>
-                    <p className="text-gray-500">${(product.basePriceMoney.priceMoney / 100).toFixed(2)}</p>
+                    <p className="text-gray-500">{calculatePrice(product.basePriceMoney.priceMoney)}</p>
                     <p className="text-gray-500">Qty: {product.quantity}</p>
                     <button onClick={() => removeItem(product.catalogObjectId)} className="text-black">
                       Remove
@@ -84,7 +85,7 @@ const ShoppingCart = () => {
               ))}
               <div className="flex justify-between text-black py-4">
                 <dt>Subtotal</dt>
-                <dd>${(totalCost / 100).toFixed(2)}</dd>
+                <dd>{calculatePrice(totalCost)}</dd>
               </div>
             </ul>
 

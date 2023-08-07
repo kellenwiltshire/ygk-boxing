@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return <div className="relative isolate overflow-hidden pt-14 min-h-screen">
     <img
@@ -6,7 +8,10 @@ const Hero = () => {
       className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
     />
 
-    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+    <div className="mx-auto max-w-2xl pb-32 sm:py-48 lg:pb-56 lg:pt-24">
+      <img src="/pictures/ygklogo.jpg"
+           alt="logo"
+           className="rounded-full mx-auto mb-4" />
 
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -16,15 +21,15 @@ const Hero = () => {
           A community-based boxing club founded on the principles of respect, responsibility, hard work and integrity.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href="#"
+          <Link
+            href="/schedule"
             className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
           >
             Get started
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link href="/about" className="text-sm font-semibold leading-6 text-white">
             Learn more <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

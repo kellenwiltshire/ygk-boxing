@@ -1,17 +1,19 @@
 import { IDay } from "../../utils/types/ScheduleTypes";
 import { classNames } from "../../utils/helpers/classNames";
 import dayjs from "dayjs";
-import { events } from "./Vars/Events";
+import { events, months } from "./Vars/Events";
 import Link from "next/link";
 
 
 const Calendar = () => {
   const currDay: number = dayjs().day();
+  const currMonth: number = dayjs().month();
+  const year: number = dayjs().year();
   return (
-    <div className="lg:flex lg:h-full lg:flex-col max-w-7xl hidden md:block">
+    <div className="lg:flex lg:h-full lg:flex-col max-w-7xl hidden md:block pb-8 lg:pb-0">
       <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
         <h1 className="text-base font-semibold leading-6 text-white">
-          <time dateTime="2023-06">June 2023</time>
+          {months[currMonth]} {year}
         </h1>
 
       </header>
@@ -19,29 +21,29 @@ const Calendar = () => {
         <div
           className="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs font-semibold leading-6 text-gray-700 lg:flex-none">
           <div className="bg-white py-2">
-            S<span className="sr-only sm:not-sr-only">un</span>
+            Sun
           </div>
           <div className="bg-white py-2">
-            M<span className="sr-only sm:not-sr-only">on</span>
+            Mon
           </div>
           <div className="bg-white py-2">
-            T<span className="sr-only sm:not-sr-only">ue</span>
+            Tue
           </div>
           <div className="bg-white py-2">
-            W<span className="sr-only sm:not-sr-only">ed</span>
+            Wed
           </div>
           <div className="bg-white py-2">
-            T<span className="sr-only sm:not-sr-only">hu</span>
+            Thu
           </div>
           <div className="bg-white py-2">
-            F<span className="sr-only sm:not-sr-only">ri</span>
+            Fri
           </div>
           <div className="bg-white py-2">
-            S<span className="sr-only sm:not-sr-only">at</span>
+            Sat
           </div>
         </div>
         <div className="flex bg-gray-200 text-xs leading-6 text-gray-700 lg:flex-auto">
-          <div className="hidden w-full lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-px">
+          <div className="hidden w-full sm:grid sm:grid-cols-7 sm:grid-rows-1 sm:gap-px">
             {events.map((day: IDay, index: number) => (
               <div
                 key={day.dayOfWeek}

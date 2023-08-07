@@ -10,7 +10,8 @@ const ContactUs = () => {
 
             <h2 className="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Have questions before you get started? Send us a message and we'll be happy to answer any questions you
+              Have questions before you get started? Send us a message and we&apos;ll be happy to answer any questions
+              you
               have!
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">

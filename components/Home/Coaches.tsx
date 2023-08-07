@@ -25,7 +25,7 @@ const Coaches = () => {
   return (
     <div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl sm:text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About YGK Boxing</h2>
           <p className="mt-6 text-lg leading-8">
             Since January 2018 YGK Boxing has been Kingstons distinctive boxing headquarters for boxing training and

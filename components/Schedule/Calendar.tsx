@@ -5,11 +5,10 @@ import { events } from "./Vars/Events";
 import Link from "next/link";
 
 
-const currDay: number = dayjs().day();
-
 const Calendar = () => {
+  const currDay: number = dayjs().day();
   return (
-    <div className="lg:flex lg:h-full lg:flex-col max-w-7xl">
+    <div className="lg:flex lg:h-full lg:flex-col max-w-7xl hidden md:block">
       <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
         <h1 className="text-base font-semibold leading-6 text-white">
           <time dateTime="2023-06">June 2023</time>

@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const Store = ({ products }: IProps) => {
-  return <div className="flex flex-col gap-4">
+  return <div className="flex flex-col">
     <div className="w-full flex justify-center">
       <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl">Store</h2>
     </div>

@@ -26,8 +26,8 @@ const Links = () => {
     </h2>
     <ol className="flex justify-center flex-col items-center">
       {linkList.map((item: ILink, i: number) => {
-        return <li key={i}>
-          <a href={item.href} className="underline hover:text-blue-200">{item.text}</a>
+        return <li key={i} className="text-center">
+          <a href={item.href} className="underline hover:text-blue-200 text-center">{item.text}</a>
         </li>;
       })}
     </ol>

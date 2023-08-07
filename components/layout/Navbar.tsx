@@ -15,13 +15,14 @@ const Navbar = () => {
         <a href="#" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
           <img
-            className="h-8"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+            className="h-8 rounded-full"
+            src="/pictures/ygklogo.jpg"
             alt="YGK Boxing"
           />
         </a>
       </div>
 
+      {/* Mobile Navbar */}
       <div className="flex lg:hidden">
         <button
           type="button"
@@ -41,23 +42,23 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-self-end">
-        {(cart.items.length > 0) &&
+      {(cart.items.length > 0) &&
+        <div className="flex justify-self-end">
           <ShoppingCart />
-        }
-      </div>
+        </div>
+      }
 
     </nav>
     <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
       <div className="fixed inset-0 z-50" />
       <Dialog.Panel
-        className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#121212] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
         <div className="flex items-center justify-between">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+              className="h-8 w-auto rounded-full"
+              src="/pictures/ygklogo.jpg"
               alt=""
             />
           </a>
@@ -82,10 +83,10 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              {(cart.items.length > 0) &&
+                <ShoppingCart />
+              }
             </div>
-            {(cart.items.length > 0) &&
-              <ShoppingCart />
-            }
           </div>
         </div>
       </Dialog.Panel>

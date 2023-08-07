@@ -20,7 +20,7 @@ const rulesList: Array<IRule> = [
 ];
 
 const Rules = () => {
-  return <div className="max-w-7xl py-20">
+  return <div className="max-w-7xl py-20 mx-8 md:mx-0">
     <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl text-center mb-4">
       YGK Boxing Rules
     </h2>

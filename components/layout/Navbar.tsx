@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-  const cart = useAppSelector(state => state);
+  const { cart } = useAppSelector(state => state);
   return <header className="bg-black text-white">
     <nav className="flex items-center justify-between p-6 lg:px-8 w-full" aria-label="Global">
       <div className="flex justify-self-start">

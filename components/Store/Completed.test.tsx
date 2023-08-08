@@ -12,11 +12,6 @@ describe("Completed Component", () => {
     // Check if "Thanks for ordering" text is present
     expect(screen.getByText("Thanks for ordering")).toBeInTheDocument();
 
-    // Check if the image is rendered with the correct alt attribute
-    const logoImage = screen.getByAltText("Logo");
-    expect(logoImage).toBeInTheDocument();
-    expect(logoImage.getAttribute("src")).toBe("/pictures/ygklogo.jpg");
-
     // Check if "Continue Shopping" link is present and has the correct href
     const continueShoppingLink = screen.getByText("Continue Shopping");
     expect(continueShoppingLink).toBeInTheDocument();

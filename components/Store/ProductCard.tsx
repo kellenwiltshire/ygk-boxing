@@ -1,6 +1,7 @@
 import { ICatalogObject } from "../../utils/types/CatalogTypes";
 import Link from "next/link";
 import { calculatePrice } from "../../utils/helpers/calcPrice";
+import Image from 'next/image'
 
 interface IProps {
   product: ICatalogObject;
@@ -12,7 +13,7 @@ const ProductCard = ({ product }: IProps) => {
                className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white"
   >
     <div className="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
-      <img
+      <Image height={350} width={350}
         src="/pictures/ygklogo.jpg"
         alt="description"
         className="h-full w-full object-cover object-center sm:h-full sm:w-full"

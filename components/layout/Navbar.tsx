@@ -5,16 +5,18 @@ import { navigation } from "../../utils/Consts/Layout/navigation";
 import { INavProps } from "../../utils/types/LayoutTypes";
 import ShoppingCart from "../Store/ShoppingCart";
 import { useAppSelector } from "../../redux/hooks";
+import Image from "next/image";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-  const { cart } = useAppSelector(state => state);
+  const cart = useAppSelector(state => state);
   return <header className="bg-black text-white">
     <nav className="flex items-center justify-between p-6 lg:px-8 w-full" aria-label="Global">
       <div className="flex justify-self-start">
         <a href="#" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
-          <img
+          <Image
+            height={32} width={32}
             className="h-8 rounded-full"
             src="/pictures/ygklogo.jpg"
             alt="YGK Boxing"
@@ -56,7 +58,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
+            <Image height={32} width={32}
               className="h-8 w-auto rounded-full"
               src="/pictures/ygklogo.jpg"
               alt=""

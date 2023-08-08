@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 const features = [
   {
     name: "Boxer Name",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget velit aliquet sagittis id consectetur purus ut. Bibendum est ultricies integer quis auctor elit. In mollis nunc sed id. Eget magna fermentum iaculis eu non diam phasellus. Lectus arcu bibendum at varius vel pharetra vel. Non quam lacus suspendisse faucibus.",
-    imageSrc: "https://tailwindui.com/img/ecommerce-images/product-feature-04-detail-03.jpg",
+    imageSrc: "/pictures/image-12.jpg",
     imageAlt: "Champ of the Month"
   }
 ];
@@ -29,7 +31,7 @@ const ChampOfMonth = () => {
                 </div>
                 <div className="flex-auto lg:col-span-7 xl:col-span-8">
                   <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
-                    <img src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center" />
+                    <Image width={350} height={500} src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center" />
                   </div>
                 </div>
               </div>

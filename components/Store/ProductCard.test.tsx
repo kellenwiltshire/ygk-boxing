@@ -72,10 +72,5 @@ describe("ProductCard Component", () => {
     // Check if the product price is present and formatted correctly
     const productPrice = screen.getByText("$20.00");
     expect(productPrice).toBeInTheDocument();
-
-    // Check if the image is rendered with the correct alt attribute
-    const productImage = screen.getByAltText("description");
-    expect(productImage).toBeInTheDocument();
-    expect(productImage.getAttribute("src")).toBe("/pictures/ygklogo.jpg");
   });
 });

@@ -1,10 +1,7 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
 import ProductInfo from "./ProductInfo";
 import { ICatalogObject } from "../../utils/types/CatalogTypes";
-import { useAppDispatch } from "../../redux/hooks";
-import { addToCart } from "../../redux/cartSlice";
 
 jest.mock("../../redux/hooks", () => ({
   useAppDispatch: jest.fn()

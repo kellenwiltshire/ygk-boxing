@@ -1,12 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"
 
 const Completed = () => {
   return (
     <>
       <main className="relative lg:min-h-full mt-12">
         <div className="lg:absolute lg:w-1/2 lg:pr-4 xl:pr-12">
-          <img
+          <Image
+            width={350}
+            height={350}
             src="/pictures/ygklogo.jpg"
             alt="Logo"
             className="w-full p-2 sm:p-0 h-full lg:h-auto rounded-full"

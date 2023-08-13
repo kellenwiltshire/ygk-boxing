@@ -1,17 +1,19 @@
 import Link from "next/link";
+import Image from "next/image"
 
 const Hero = () => {
   return <div className="relative isolate overflow-hidden pt-14 min-h-screen">
-    <img
+    <Image fill={true}
       src="/pictures/image-4.jpg"
       alt=""
       className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
     />
 
     <div className="mx-auto max-w-2xl pb-32 sm:py-48 lg:pb-56 lg:pt-24">
-      <img src="/pictures/ygklogo.jpg"
+
+      <Image src="/pictures/ygklogo.jpg"
            alt="logo"
-           className="rounded-full mx-auto mb-4" />
+           className="rounded-full mx-auto mb-4" height={350} width={350} />
 
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">

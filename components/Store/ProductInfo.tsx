@@ -41,7 +41,7 @@ const ProductInfo = ({ product }: IProps) => {
               className="text-lg sm:text-xl">{calculatePrice(product.itemData.variations[0].itemVariationData.priceMoney.amount)}</p>
           </div>
           <div className="mt-4 space-y-6">
-            <p className="text-base">Description</p>
+            <p className="text-base">{product.itemData.description}</p>
           </div>
         </section>
       </div>

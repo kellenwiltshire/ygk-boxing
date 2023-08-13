@@ -39,6 +39,7 @@ export interface IItemVariation {
 export interface IItemData {
   name: string;
   abbreviation: string;
+  description?: string;
   label_color: string;
   is_taxable: boolean;
   visibility: string;

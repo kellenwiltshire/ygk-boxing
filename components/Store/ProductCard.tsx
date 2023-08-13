@@ -23,7 +23,7 @@ const ProductCard = ({ product }: IProps) => {
         <span aria-hidden="true" className="absolute inset-0" />
         {product.itemData.name}
       </h3>
-      <p className="text-sm text-gray-500">Description</p>
+      <p className="text-sm text-gray-500">{product.itemData.description}</p>
       <div className="flex flex-1 flex-col justify-end">
         <p
           className="text-base font-medium text-gray-900">{calculatePrice(product.itemData.variations[0].itemVariationData.priceMoney.amount)}</p>

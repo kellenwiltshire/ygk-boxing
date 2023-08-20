@@ -1,18 +1,20 @@
-import {
-  Html,
-  Head,
-  Main,
-  NextScript
-} from 'next/document'
+import Document, {Head, Html, Main, NextScript} from 'next/document'
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-      <Main />
-      <NextScript />
-      </body>
-    </Html>
-  )
+const isProd = process.env.NODE_ENV === 'production'
+
+export default class MyDocument extends Document {
+  render(): JSX.Element {
+    return (
+      <Html lang="en">
+        <Head />
+        <body>
+        <Main />
+        <NextScript />
+        {isProd && (
+          <script async src="https://analytics-gqku558ax-kellenwiltshire.vercel.app/script.js" data-website-id="bcb8b78c-e0a0-4688-bc04-83affc395c5a"></script>
+        )}
+        </body>
+      </Html>
+    )
+  }
 }

@@ -4,7 +4,11 @@ import Image from "next/image"
 const Hero = () => {
   return <div className="relative isolate overflow-hidden pt-14 min-h-screen">
     <Image fill={true}
-      src="/pictures/image-4.jpg"
+      quality={50}
+      priority={false}
+      placeholder="blur"
+      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      src="/video.gif"
       alt=""
       className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
     />

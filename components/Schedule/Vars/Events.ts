@@ -20,11 +20,11 @@ export const events: Array<IDay> = [
         time: "4:30pm - 5:45pm"
       },
       {
-        name: "Warmup for Adult Boxing Class",
-        time: "6:00pm - 6:15pm"
+        name: "Adult Boxing Workout (Ages 13+)",
+        time: "5:45pm - 6:15pm"
       },
       {
-        name: "Adult Boxing Class (Ages 13+)",
+        name: "Adult Boxing Workout (Ages 13+)",
         time: "6:15pm - 7:15pm"
       },
       {
@@ -36,8 +36,8 @@ export const events: Array<IDay> = [
     dayOfWeek: "Tuesday",
     events: [
       {
-        name: "Open Gym Workout",
-        time: "5:00pm - 6:00pm"
+        name: "Beginners - Go at your own pace without coaches",
+        time: "4:30pm - 5:30pm"
       },
       {
         name: "Warmup for Adult Boxing Class",
@@ -58,11 +58,11 @@ export const events: Array<IDay> = [
     events: [
       {
         name: "Open Gym Workout",
-        time: "5:00pm - 7:00pm"
+        time: "4:00pm - 6:00pm"
       },
       {
-        name: "Competitive Sparring (Must be registered with Boxing Ontario)",
-        time: "5:00pm - 7:00pm"
+        name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
+        time: "6:00pm - 8:00pm"
       }
     ]
   },
@@ -76,13 +76,10 @@ export const events: Array<IDay> = [
         name: "Kids Class (Open for kids aged 7 - 12)",
         time: "4:30pm - 5:45pm"
       },
-      {
-        name: "Beginners Open Workout",
-        time: "4:30pm - 5:45pm"
-      },
+     
       {
         name: "Warmup for Adult Boxing Class",
-        time: "6:00pm - 6:15pm"
+        time: "5:45pm - 6:15pm"
       },
       {
         name: "Adult Boxing Class (Ages 13+)",
@@ -96,12 +93,12 @@ export const events: Array<IDay> = [
   {
     dayOfWeek: "Friday", events: [
       {
-        name: "Open Gym Workout",
-        time: "5:00pm - 7:00pm"
+        name: "Ladies Only Boxing Workout",
+        time: "5:00pm - 6:00pm"
       },
       {
-        name: "Competitive Sparring (Must be registered with Boxing Ontario)",
-        time: "5:00pm - 7:00pm"
+        name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
+        time: "6:00pm - 8:00pm"
       }
     ]
   },
@@ -109,7 +106,7 @@ export const events: Array<IDay> = [
     dayOfWeek: "Saturday", events: [
       {
         name: "Boxing Circuit #1 (12-15 Rounds of various exercises)",
-        time: "9:00am - 10:15am"
+        time: "9:15am - 10:15am"
       },
       {
         name: "Boxing Circuit #2 (12-15 Rounds of various exercises)",

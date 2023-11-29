@@ -12,6 +12,7 @@ const Hero = () => {
       alt=""
       className="absolute inset-0 -z-10 h-full w-full object-cover opacity-20"
     />
+    
 
     <div className="mx-auto max-w-2xl pb-32 sm:py-48 lg:pb-56 lg:pt-24">
 

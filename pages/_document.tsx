@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
         <Main />
         <NextScript />
         {isProd && (
-          <script async src="https://analytics-gqku558ax-kellenwiltshire.vercel.app/script.js" data-website-id="bcb8b78c-e0a0-4688-bc04-83affc395c5a"></script>
+          <script async src="https://analytics.kellenwiltshire.com/script.js" data-website-id="bcb8b78c-e0a0-4688-bc04-83affc395c5a"></script>
         )}
         </body>
       </Html>

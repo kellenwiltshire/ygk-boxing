@@ -3,7 +3,7 @@ import Gallery from '../components/Media/Gallery'
 
 const Media = () => {
 	return <div className='flex flex-col'>
-		<ChampOfMonth />
+		{/* <ChampOfMonth /> */}
 		<Gallery />
 	</div>
 }

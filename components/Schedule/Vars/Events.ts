@@ -20,7 +20,7 @@ export const events: Array<IDay> = [
         time: "4:30pm - 5:45pm"
       },
       {
-        name: "Adult Boxing Workout (Ages 13+)",
+        name: "Warm Up / Open Gym",
         time: "5:45pm - 6:15pm"
       },
       {
@@ -36,8 +36,12 @@ export const events: Array<IDay> = [
     dayOfWeek: "Tuesday",
     events: [
       {
-        name: "Beginners - Go at your own pace without coaches",
+        name: "Beginners Class",
         time: "4:30pm - 5:30pm"
+      },
+      {
+        name: "Warm Up / Open Gym",
+        time: "5:30pm - 6:15pm"
       },
       {
         name: "Warmup for Adult Boxing Class",
@@ -116,10 +120,7 @@ export const events: Array<IDay> = [
         name: "Open Gym Workout",
         time: "11:15am - 12:00pm"
       },
-      {
-        name: "Mark Cleary Sitpeegohn Muay Thai",
-        time: "1:00pm - 3:00pm"
-      }
+      
     ]
   }
 ];

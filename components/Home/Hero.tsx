@@ -24,6 +24,9 @@ const Hero = () => {
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
           YGK Boxing
         </h1>
+        <h1 className="text-2xl tracking-tight text-white sm:text-4xl">
+         YOUR BEST HAS YET TO BE UNLEASHED
+        </h1>
         <p className="mt-6 text-lg leading-8 text-gray-300">
           A community-based boxing club founded on the principles of respect, responsibility, hard work and integrity.
         </p>

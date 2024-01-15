@@ -26,16 +26,9 @@ const Coaches = () => {
     <div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About YGK Boxing</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl sm:mt-4">About YGK Boxing</h2>
           <p className="mt-6 text-lg leading-8">
-            Since January 2018 YGK Boxing has been Kingstons distinctive boxing headquarters for boxing training and
-            competition.The Youth Group Kingston Boxing Club&apos;s vision focuses on the positive development of youth,
-            adults and seniors through exercise, confidence, and better self-worth. YGK Boxing is for anyone that wants
-            to learn the fundamentals of boxing while achieving their own fitness goals. YGK Boxing operates a safe
-            boxing club through Boxing Ontario where youth, adults and seniors will be able to spend their time in a
-            positive environment with knowledgeable coaches having fun, gaining confidence and making friends. At YGK
-            Boxing Club we cultivate an inclusive environment by considering all dimensions of physical and mental
-            diversity. Exceed your expectations by joining YGK Boxing today!
+          Welcome to YGK Boxing, a vibrant community boxing club founded in January 2018 with a commitment to fostering growth and well-being across all age groups. Our focus extends beyond the gloves as we passionately dedicate ourselves to the development of kids, youth, adults, and seniors through the transformative power of exercise and boxing. Nestled in an inclusive community within a positive environment, our club is a place where individuals not only enhance their confidence, strength, and boxing abilities but also forge lasting friendships. Whether your aspirations are personal development, a healthier lifestyle, or aspiring to become the next Champion of the World, YGK Boxing is your club. We invite you to surpass your expectations in this safe and encouraging space, designed to bring out the best in everyone. &quot;Your Best Has Yet To Be Unleashed&quot; is not just a motto—it&apos;s a guiding principle that defines our shared journey towards empowerment and excellence. Join YGK Boxing and embark on a path where your true potential awaits.
           </p>
         </div>
         {/*<ul*/}

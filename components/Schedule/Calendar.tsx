@@ -3,12 +3,14 @@ import { classNames } from "../../utils/helpers/classNames";
 import dayjs from "dayjs";
 import { events, months } from "./Vars/Events";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 const Calendar = () => {
   const currDay: number = dayjs().day();
   const currMonth: number = dayjs().month();
   const year: number = dayjs().year();
+  const router = useRouter()
   return (
     <div className="lg:flex lg:h-full lg:flex-col max-w-7xl hidden md:block pb-8 lg:pb-0">
       <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">
@@ -56,7 +58,7 @@ const Calendar = () => {
                 {day.events.length > 0 && (
                   <ol className="mt-2 divide-y-2 divide-y-gray-500">
                     {day.events.map((event) => (
-                      <li key={event.name}>
+                      <li className={`${(event.id != null) ? 'underline cursor-pointer' : ''}`} onClick={() => {(event.id != null) && router.push(`/schedule#${event.id}`).catch(err => console.log(err))}} key={event.name}>
                         <div className="group flex flex-col">
                           <time
                             dateTime={event.time}

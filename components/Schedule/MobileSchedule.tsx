@@ -4,8 +4,10 @@ import { events } from "./Vars/Events";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const MobileSchedule = () => {
+  const router = useRouter()
   const currDay: number = dayjs().day();
   return (
     <div className="px-6 pb-4 block md:hidden">
@@ -19,17 +21,17 @@ const MobileSchedule = () => {
                   <span>{day.dayOfWeek}</span>
                   <ChevronUpIcon
                     className={`${
-                      open ? "rotate-180 transform" : ""
+                      !open ? "rotate-180 transform" : ""
                     } h-5 w-5 text-white`}
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel as="ol" className="px-4 pt-4 pb-2 text-sm text-white">
                   {day.events.map((event) => {
-                    return <li key={event.name}>
+                    return <li onClick={() => {(event.id != null) && router.push(`/schedule#${event.id}`).catch(err => console.log(err))}} key={event.name}>
                       <div className="group flex flex-col">
                         <time
                           dateTime={event.time}
-                          className="flex-none text-gray-500 block"
+                          className="flex-none text-gray-50 block"
                         >
                           {event.time}
                         </time>
@@ -38,7 +40,7 @@ const MobileSchedule = () => {
                             {event.name}
                           </Link>
                           :
-                          <p className="ml-3 flex-auto font-medium text-white">
+                          <p className={`${(event.id != null) ? 'underline cursor-pointer' : ''} ml-3 flex-auto font-medium text-white`}  >
                             {event.name}
                           </p>
                         }

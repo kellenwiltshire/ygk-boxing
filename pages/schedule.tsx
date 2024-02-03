@@ -5,9 +5,9 @@ import MobileSchedule from "../components/Schedule/MobileSchedule";
 
 const Schedule = () => {
   return <div className="flex flex-col">
+    <Membership />
     <Calendar />
     <MobileSchedule />
-    <Membership />
     <ClassDescriptions />
   </div>;
 };

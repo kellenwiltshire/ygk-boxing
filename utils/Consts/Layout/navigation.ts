@@ -5,6 +5,6 @@ export const navigation: Array<INavProps> = [
 	{name: 'Schedule', href: '/schedule'},
 	{name: 'Media', href: '/media'},
 	{name: 'Store', href: '/store'},
-	{name: 'About', href: '/about'},
+	{name: 'About & FAQ', href: '/about'},
 	{name: 'Contact', href: '/contact'},
 ]

@@ -1,6 +1,7 @@
 export interface IDay {
 	dayOfWeek: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday'
 	events: {
+		id?: string
 		name: string
 		time: string
 	}[]

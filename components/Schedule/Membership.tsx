@@ -44,9 +44,12 @@ export const Membership = () => {
             </div>
           ))}
         </div>
-        <p className="mt-4 text-base font-semibold leading-7 text-center">Register with Boxing Canada
-          HERE</p>
+        <div className="flex justify-center w-full">
+
+        <a href="https://boxingcanada.org/registration/" className="mt-4 text-base font-semibold leading-7 text-center">Register with Boxing Canada
+          HERE</a>
       </div>
+        </div>
     </div>
   );
 };

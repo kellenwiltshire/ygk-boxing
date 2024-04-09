@@ -40,7 +40,7 @@ export const events: Array<IDay> = [
       {
         id:'BEGINNERS',
         name: "Beginners Class",
-        time: "4:30pm - 5:30pm"
+        time: "5:00pm - 5:30pm"
       },
       {
         id: 'OPENGYM',
@@ -74,7 +74,7 @@ export const events: Array<IDay> = [
       {
         id:'SPARRING',
         name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
-        time: "6:00pm - 8:00pm"
+        time: "6:00pm - 7:00pm"
       }
     ]
   },
@@ -103,7 +103,7 @@ export const events: Array<IDay> = [
       {
         id:'OPENGYM',
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
-        time: "7:15pm - 8:00pm"
+        time: "7:15pm - 7:00pm"
       }]
   },
   {

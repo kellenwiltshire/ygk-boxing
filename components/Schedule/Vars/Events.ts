@@ -109,14 +109,9 @@ export const events: Array<IDay> = [
   {
     dayOfWeek: "Friday", events: [
       {
-        id:'WOMEN',
-        name: "Ladies Only Boxing Workout",
-        time: "4:30pm - 6:00pm"
-      },
-      {
         id:'SPARRING',
         name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
-        time: "6:00pm - 8:00pm"
+        time: "4:00pm - 6:00pm"
       }
     ]
   },
@@ -172,13 +167,14 @@ export const classDescriptions = [
     description: "YGK Boxing's competitive team is an elite training ground for those registered with Boxing Ontario, committed to honing their skills in sparring and competition. Our rigorous program focuses on refining techniques, film analysis, and fostering a culture of excellence and mutual accountability. Emphasizing safety and adherence to rules, we take boxing seriously – it's not a sport we play. Prospective members must prove themselves through dedicated workouts, demonstrating the commitment required to earn a coveted spot on our team. Join us and be prepared to elevate your boxing journey to new heights."
   }
   , {
-    id:'WOMEN',
-    name: "WOMENS ONLY CLASS",
-    description: "Join YGK Boxing's exclusive womens-only class every Friday from 4:30-6:00 pm, designed to empower and inspire. This session provides a supportive environment for women to explore the fundamentals of boxing, enhance their fitness, and build camaraderie with like-minded individuals. Led by experienced trainers, this class offers a unique opportunity for women to challenge themselves physically and mentally in a welcoming and encouraging setting."
-  }
-  , {
     id:'CIRCUIT',
     name: "SATURDAY CIRCUIT",
     description: "Elevate your weekend with YGK Boxing's Saturday morning circuits, where every session is a thrilling surprise. With a random selection of 12-15 rounds from a repertoire of over 100 different exercises, each workout promises novelty and excitement. Some weeks, we add an extra layer of fun and challenge by drawing from our curated list of 50 specially designed routines. Join us for a dynamic and invigorating start to your weekend, ensuring each circuit is a fresh and energizing experience."
   }
 ]
+
+// {
+//   id:'WOMEN',
+//   name: "WOMENS ONLY CLASS",
+//   description: "Join YGK Boxing's exclusive womens-only class every Friday from 4:30-6:00 pm, designed to empower and inspire. This session provides a supportive environment for women to explore the fundamentals of boxing, enhance their fitness, and build camaraderie with like-minded individuals. Led by experienced trainers, this class offers a unique opportunity for women to challenge themselves physically and mentally in a welcoming and encouraging setting."
+// }

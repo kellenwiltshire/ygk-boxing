@@ -4,7 +4,7 @@ import { tiers } from "./Vars/Tiers";
 
 export const Membership = () => {
   return (
-    <div className="pb-24 sm:pb-32 pt-4">
+    <div className="pb-24 sm:pb-16 pt-4">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -50,6 +50,9 @@ export const Membership = () => {
           HERE</a>
       </div>
         </div>
+      <div className="w-full flex items-center justify-center">
+        <h6 className="text-2xl mt-2">Members can enjoy full access to the Gym from 9:00 AM to 4:00 PM everyday for Open Workouts!</h6>
+      </div>
     </div>
   );
 };

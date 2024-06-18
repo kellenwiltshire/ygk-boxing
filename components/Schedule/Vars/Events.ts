@@ -103,7 +103,7 @@ export const events: Array<IDay> = [
       {
         id:'OPENGYM',
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
-        time: "7:15pm - 7:00pm"
+        time: "7:15pm - 8:00pm"
       }]
   },
   {

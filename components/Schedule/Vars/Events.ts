@@ -119,18 +119,13 @@ export const events: Array<IDay> = [
     dayOfWeek: "Saturday", events: [
       {
         id:'CIRCUIT',
-        name: "Boxing Circuit #1 (12-15 Rounds of various exercises)",
-        time: "9:15am - 10:15am"
-      },
-      {
-        id:'CIRCUIT',
-        name: "Boxing Circuit #2 (12-15 Rounds of various exercises)",
-        time: "10:15am - 11:15am"
+        name: "Boxing Circuit (12-15 Rounds of various exercises)",
+        time: "9:30am - 10:30am"
       },
       {
         id:'OPENGYM',
         name: "Open Gym Workout",
-        time: "11:15am - 12:00pm"
+        time: "10:30am - 12:00pm"
       },
       
     ]

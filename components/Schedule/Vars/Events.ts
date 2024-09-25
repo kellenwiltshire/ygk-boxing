@@ -32,6 +32,11 @@ export const events: Array<IDay> = [
         id: 'OPENGYM',
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
         time: "7:15pm - 8:00pm"
+      },
+      {
+        id: 'OPENGYM',
+        name: "Member Access",
+        time: "9:00am - 4:00pm"
       }]
   },
   {
@@ -48,10 +53,6 @@ export const events: Array<IDay> = [
         time: "5:30pm - 6:15pm"
       },
       {
-        name: "Warm Up",
-        time: "6:00pm - 6:15pm"
-      },
-      {
         id:'TADULT',
         name: "Adult Boxing Workout/Class (Ages 13+)",
         time: "6:15pm - 7:15pm"
@@ -60,6 +61,11 @@ export const events: Array<IDay> = [
         id:'OPENGYM',
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
         time: "7:15pm - 8:00pm"
+      },
+      {
+        id: 'OPENGYM',
+        name: "Member Access",
+        time: "9:00am - 4:00pm"
       }
     ]
   },
@@ -75,6 +81,11 @@ export const events: Array<IDay> = [
         id:'SPARRING',
         name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
         time: "6:00pm - 7:00pm"
+      },
+      {
+        id: 'OPENGYM',
+        name: "Member Access",
+        time: "9:00am - 6:00pm"
       }
     ]
   },
@@ -104,6 +115,11 @@ export const events: Array<IDay> = [
         id:'OPENGYM',
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
         time: "7:15pm - 8:00pm"
+      },
+      {
+        id: 'OPENGYM',
+        name: "Member Access",
+        time: "9:00am - 4:00pm"
       }]
   },
   {
@@ -112,6 +128,11 @@ export const events: Array<IDay> = [
         id:'SPARRING',
         name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
         time: "4:00pm - 6:00pm"
+      },
+      {
+        id: 'OPENGYM',
+        name: "Member Access",
+        time: "9:00am - 4:00pm"
       }
     ]
   },
@@ -153,7 +174,7 @@ export const classDescriptions = [
   {
     id:'OPENGYM',
     name: "OPEN GYM WORKOUT",
-    description: "Unlock the convenience and flexibility of our open-boxing gym exclusively for YGK Boxing members. With 24/7 access, members can tailor their training to their own schedule, enjoying a self-guided workout experience. Inquire today to become a member and embrace the freedom of honing your boxing skills at your preferred time, ensuring a seamless and personalized fitness journey with YGK Boxing."
+    description: "Unlock the convenience and flexibility of our open-boxing gym exclusively for YGK Boxing members. With expanded access, members can tailor their training to their own schedule, enjoying a self-guided workout experience. Inquire today to become a member and embrace the freedom of honing your boxing skills at your preferred time, ensuring a seamless and personalized fitness journey with YGK Boxing."
   }
   ,
   {

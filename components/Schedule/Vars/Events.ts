@@ -12,9 +12,9 @@ export const events: Array<IDay> = [
   {
     dayOfWeek: "Monday", events: [
       {
-        id:'OPENGYM',
+        id: 'OPENGYM',
         name: "Open Gym Workout",
-        time: "12:00pm - 4:00pm"
+        time: "9:00am - 4:00pm"
       },
       {
         name: "Kids Class (Open for kids aged 7 - 12)",
@@ -25,19 +25,25 @@ export const events: Array<IDay> = [
         time: "6:00pm - 6:15pm"
       },
       {
+        id:'ADULT',
+        name: "Adult Boxing Workout/Class (Ages 13+)",
+        time: "6:15pm - 7:15pm"
+      },
+      {
         id: 'OPENGYM',
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
         time: "7:15pm - 8:00pm"
       },
-      {
-        id: 'OPENGYM',
-        name: "Member Access",
-        time: "9:00am - 4:00pm"
-      }]
+      ]
   },
   {
     dayOfWeek: "Tuesday",
     events: [
+      {
+        id: 'OPENGYM',
+        name: "Open Gym Workout",
+        time: "9:00am - 4:00pm"
+      },
       {
         id:'BEGINNERS',
         name: "Beginners Class",
@@ -58,39 +64,31 @@ export const events: Array<IDay> = [
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
         time: "7:15pm - 8:00pm"
       },
-      {
-        id: 'OPENGYM',
-        name: "Member Access",
-        time: "9:00am - 4:00pm"
-      }
+     
     ]
   },
   {
     dayOfWeek: "Wednesday",
     events: [
       {
-        id:'OPENGYM',
+        id: 'OPENGYM',
         name: "Open Gym Workout",
-        time: "4:00pm - 6:00pm"
+        time: "9:00am - 6:00pm"
       },
       {
         id:'SPARRING',
         name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
         time: "6:00pm - 7:00pm"
       },
-      {
-        id: 'OPENGYM',
-        name: "Member Access",
-        time: "9:00am - 6:00pm"
-      }
+      
     ]
   },
   {
     dayOfWeek: "Thursday", events: [
       {
-        id:'OPENGYM',
-                name: "Open Gym Workout",
-        time: "12:00pm - 4:00pm"
+        id: 'OPENGYM',
+        name: "Open Gym Workout",
+        time: "9:00am - 4:00pm"
       },
       {
         
@@ -112,24 +110,21 @@ export const events: Array<IDay> = [
         name: "Open Gym (sparring, pads, stretching, personal workouts)",
         time: "7:15pm - 8:00pm"
       },
+      ]
+  },
+  {
+    dayOfWeek: "Friday", events: [
       {
         id: 'OPENGYM',
         name: "Member Access",
         time: "9:00am - 4:00pm"
-      }]
-  },
-  {
-    dayOfWeek: "Friday", events: [
+      },
       {
         id:'SPARRING',
         name: "Competitive Team Sparring (Must be registered with Boxing Ontario)",
         time: "4:00pm - 6:00pm"
       },
-      {
-        id: 'OPENGYM',
-        name: "Member Access",
-        time: "9:00am - 4:00pm"
-      }
+     
     ]
   },
   {

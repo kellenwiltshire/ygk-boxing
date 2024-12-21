@@ -5,9 +5,9 @@ import FAQ from "components/About/FAQ";
 
 const About = () => {
   return <div className="flex flex-col">
+    <FAQ />
     <Coaches />
     <Rules />
-    <FAQ />
     <Links />
   </div>;
 };

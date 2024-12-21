@@ -13,8 +13,8 @@ export const events: Array<IDay> = [
     dayOfWeek: "Monday", events: [
       {
         id: 'OPENGYM',
-        name: "Open Gym Workout",
-        time: "9:00am - 4:00pm"
+        name: "Member Access",
+        time: "9:00am - 7:00pm"
       },
       {
         name: "Kids Class (Open for kids aged 7 - 12)",
@@ -22,7 +22,7 @@ export const events: Array<IDay> = [
       },
       {
         name: "Warm Up",
-        time: "6:00pm - 6:15pm"
+        time: "5:45pm - 6:15pm"
       },
       {
         id:'ADULT',
@@ -41,8 +41,8 @@ export const events: Array<IDay> = [
     events: [
       {
         id: 'OPENGYM',
-        name: "Open Gym Workout",
-        time: "9:00am - 4:00pm"
+        name: "Member Access",
+        time: "9:00am - 7:00pm"
       },
       {
         id:'BEGINNERS',
@@ -72,7 +72,7 @@ export const events: Array<IDay> = [
     events: [
       {
         id: 'OPENGYM',
-        name: "Open Gym Workout",
+        name: "Member Access",
         time: "9:00am - 6:00pm"
       },
       {
@@ -87,8 +87,8 @@ export const events: Array<IDay> = [
     dayOfWeek: "Thursday", events: [
       {
         id: 'OPENGYM',
-        name: "Open Gym Workout",
-        time: "9:00am - 4:00pm"
+        name: "Member Access",
+        time: "9:00am - 7:00pm"
       },
       {
         
@@ -117,7 +117,7 @@ export const events: Array<IDay> = [
       {
         id: 'OPENGYM',
         name: "Member Access",
-        time: "9:00am - 4:00pm"
+        time: "9:00am - 7:00pm"
       },
       {
         id:'SPARRING',

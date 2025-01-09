@@ -13,7 +13,7 @@ export const events: Array<IDay> = [
     dayOfWeek: "Monday", events: [
       {
         id: 'OPENGYM',
-        name: "Member Access",
+        name: "Open Gym Member Access",
         time: "9:00am - 7:00pm"
       },
       {
@@ -41,7 +41,7 @@ export const events: Array<IDay> = [
     events: [
       {
         id: 'OPENGYM',
-        name: "Member Access",
+        name: "Open Gym Member Access",
         time: "9:00am - 7:00pm"
       },
       {
@@ -72,7 +72,7 @@ export const events: Array<IDay> = [
     events: [
       {
         id: 'OPENGYM',
-        name: "Member Access",
+        name: "Open Gym Member Access",
         time: "9:00am - 6:00pm"
       },
       {
@@ -87,7 +87,7 @@ export const events: Array<IDay> = [
     dayOfWeek: "Thursday", events: [
       {
         id: 'OPENGYM',
-        name: "Member Access",
+        name: "Open Gym Member Access",
         time: "9:00am - 7:00pm"
       },
       {
@@ -116,7 +116,7 @@ export const events: Array<IDay> = [
     dayOfWeek: "Friday", events: [
       {
         id: 'OPENGYM',
-        name: "Member Access",
+        name: "Open Gym Member Access",
         time: "9:00am - 7:00pm"
       },
       {
@@ -160,7 +160,7 @@ export const classDescriptions = [
   },
   {
     id:'OPENGYM',
-    name: "OPEN GYM WORKOUT",
+    name: "OPEN GYM MEMBER ACCESS",
     description: "Unlock the convenience and flexibility of our open-boxing gym exclusively for YGK Boxing members. With expanded access, members can tailor their training to their own schedule, enjoying a self-guided workout experience. Inquire today to become a member and embrace the freedom of honing your boxing skills at your preferred time, ensuring a seamless and personalized fitness journey with YGK Boxing."
   }
   ,

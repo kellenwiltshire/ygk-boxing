@@ -48,7 +48,7 @@ export const Membership = () => {
       </div>
         </div>
       <div className="w-full flex items-center justify-center">
-        <h6 className="text-2xl mt-2">Members can enjoy full access to the Gym from 9:00 AM to 4:00 PM everyday for Open Workouts!</h6>
+        <h6 className="text-2xl mt-2">Members can enjoy full access to the Gym from 9:00 AM to 7:00 PM everyday for Open Workouts!</h6>
       </div>
     </div>
   );

@@ -10,9 +10,6 @@ export const Membership = () => {
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Membership
           </h2>
-          <p className="mt-2 text-base font-semibold leading-7 text-indigo-400">Once you become a member you will need
-            to be
-            registered with Boxing Ontario as a recreational member or competitive boxer.</p>
         </div>
 
 
@@ -46,12 +43,12 @@ export const Membership = () => {
         </div>
         <div className="flex justify-center w-full">
 
-        <a href="https://boxingcanada.org/registration/" className="mt-4 text-base font-semibold leading-7 text-center">Register with Boxing Canada
+        <a href="https://boxingcanada.org/registration/" className="mt-4 text-2xl font-semibold leading-7 text-center underline">Register with Boxing Ontario
           HERE</a>
       </div>
         </div>
       <div className="w-full flex items-center justify-center">
-        <h6 className="text-2xl mt-2">Members can enjoy full access to the Gym from 9:00 AM to 4:00 PM everyday for Open Workouts!</h6>
+        <h6 className="text-2xl mt-2">Members can enjoy full access to the Gym from 9:00 AM to 7:00 PM everyday for Open Workouts!</h6>
       </div>
     </div>
   );

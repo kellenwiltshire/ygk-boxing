@@ -10,10 +10,11 @@ interface IProps {
 
 const Store = ({ products }: IProps) => {
   return <div className="flex flex-col">
-    <div className="w-full flex justify-center">
-      <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-5xl">Store</h2>
+    <div className="w-full flex justify-center items-center h-40">
+      <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">Store</h2>
     </div>
     <ProductList products={products} />
+    <p className="text-base font-bold tracking-tight sm:text-lg text-center">All sales are subject to applicable taxes</p>
   </div>;
 };
 export default Store;

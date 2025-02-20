@@ -49,7 +49,7 @@ const ProductInfo = ({ product }: IProps) => {
       {/* Product image */}
       <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
         <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg">
-          <Image width={350} height={350} src="/pictures/ygklogo.jpg" alt="Logo" className="h-full w-full object-cover object-center rounded-full" />
+          <Image width={350} height={350} src="/pictures/ygklogo.webp" alt="Logo" className="h-full w-full object-cover object-center rounded-full" />
         </div>
       </div>
       {/* Product form */}

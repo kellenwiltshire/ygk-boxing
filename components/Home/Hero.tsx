@@ -16,7 +16,7 @@ const Hero = () => {
 
     <div className="mx-auto max-w-2xl pb-32 sm:py-48 lg:pb-56 lg:pt-24">
 
-      <Image src="/pictures/ygklogo.jpg"
+      <Image src="/pictures/ygklogo.webp"
            alt="logo"
            className="rounded-full mx-auto mb-4" height={350} width={350} />
 

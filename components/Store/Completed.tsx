@@ -10,7 +10,7 @@ const Completed = () => {
           <Image
             width={350}
             height={350}
-            src="/pictures/ygklogo.jpg"
+            src="/pictures/ygklogo.webp"
             alt="Logo"
             className="w-full p-2 sm:p-0 h-full lg:h-auto rounded-full"
           />

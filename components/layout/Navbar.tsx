@@ -18,7 +18,7 @@ const Navbar = () => {
           <Image
             height={32} width={32}
             className="h-8 rounded-full"
-            src="/pictures/ygklogo.jpg"
+            src="/pictures/ygklogo.webp"
             alt="YGK Boxing"
           />
         </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
             <span className="sr-only">Your Company</span>
             <Image height={32} width={32}
               className="h-8 w-auto rounded-full"
-              src="/pictures/ygklogo.jpg"
+              src="/pictures/ygklogo.webp"
               alt=""
             />
           </a>

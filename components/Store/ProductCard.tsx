@@ -14,7 +14,7 @@ const ProductCard = ({ product }: IProps) => {
   >
     <div className="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none group-hover:opacity-75 sm:h-96">
       <Image height={350} width={350}
-        src="/pictures/ygklogo.jpg"
+        src="/pictures/ygklogo.webp"
         alt="description"
         className="h-full w-full object-cover object-center sm:h-full sm:w-full"
       />

@@ -5,7 +5,7 @@ const features = [
     name: "Boxer Name",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget velit aliquet sagittis id consectetur purus ut. Bibendum est ultricies integer quis auctor elit. In mollis nunc sed id. Eget magna fermentum iaculis eu non diam phasellus. Lectus arcu bibendum at varius vel pharetra vel. Non quam lacus suspendisse faucibus.",
-    imageSrc: "/pictures/image-12.jpg",
+    imageSrc: "/pictures/image-12.webp",
     imageAlt: "Champ of the Month"
   }
 ];

@@ -10,5 +10,14 @@ module.exports = {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 		return config
 	},
+	images: {
+		formats: ['image/webp'],
+		localPatterns: [
+			{
+				pathName: "/public/pictures/**",
+				search: '',
+			}
+		]
+	},
 	output: 'standalone',
 }

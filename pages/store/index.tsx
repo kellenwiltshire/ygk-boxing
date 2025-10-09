@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import ProductList from '../../components/Store/ProductList'
 import client from '../../square.connect'
 import { CatalogObject } from 'square/api'
+import JSONBig from 'json-bigint'
 
 const Store = ({ products }: { products: CatalogObject[] }) => {
 	return (
@@ -33,7 +34,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 		return {
 			props: {
-				products: filteredProducts,
+				products: JSONBig.parse(JSONBig.stringify(filteredProducts)),
 			},
 			revalidate: 1800, // Rebuild every 30 minutes
 		}

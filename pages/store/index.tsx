@@ -27,14 +27,9 @@ export const getStaticProps: GetStaticProps = async () => {
 		})
 		const objects = response.data
 
-		// Only include items with itemData (to filter out categories, taxes, etc.)
-		const filteredProducts = objects.filter((obj) =>
-			Boolean(obj.type === 'ITEM'),
-		)
-
 		return {
 			props: {
-				products: JSONBig.parse(JSONBig.stringify(filteredProducts)),
+				products: JSONBig.parse(JSONBig.stringify(objects)),
 			},
 			revalidate: 1800, // Rebuild every 30 minutes
 		}

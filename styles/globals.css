@@ -1,15 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-h1 {
-    @apply text-3xl text-center mb-5 font-bold
-}
-
-h2 {
-    @apply text-xl mb-3 font-bold
-}
-
-p {
-    @apply my-3
-}
+@import 'tailwindcss';

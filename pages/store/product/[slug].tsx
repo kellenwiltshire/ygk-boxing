@@ -25,11 +25,25 @@ export const getServerSideProps: GetServerSideProps<
 	const response = await client.catalog.object.get({
 		objectId: context.query.slug as string,
 	})
+	const filteredObj = response.object &&
+		'itemData' in response.object && {
+			...response.object,
+			itemData: {
+				// @ts-ignore
+				...response.object.itemData,
+				categories: [],
+				reportingCategory: [],
+			},
+		}
+	if (!filteredObj) {
+		return {
+			notFound: true,
+		}
+	}
+
 	return {
 		props: {
-			product: JSONBig.parse(
-				JSONBig.stringify(response.object),
-			) as ICatalogObject,
+			product: JSONBig.parse(JSONBig.stringify(filteredObj)) as ICatalogObject,
 		},
 	}
 }

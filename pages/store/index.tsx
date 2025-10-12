@@ -27,9 +27,23 @@ export const getStaticProps: GetStaticProps = async () => {
 		})
 		const objects = response.data
 
+		const filteredObjs = objects.map((obj) => {
+			if ('itemData' in obj && obj.itemData) {
+				return {
+					...obj,
+					itemData: {
+						...obj.itemData,
+						categories: [],
+						reportingCategory: [],
+					},
+				}
+			}
+			return obj
+		})
+
 		return {
 			props: {
-				products: JSONBig.parse(JSONBig.stringify(objects)),
+				products: JSONBig.parse(JSONBig.stringify(filteredObjs)),
 			},
 			revalidate: 1800, // Rebuild every 30 minutes
 		}

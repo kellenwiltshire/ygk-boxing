@@ -1,5 +1,12 @@
 export interface IDay {
-	dayOfWeek: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday'
+	dayOfWeek:
+		| 'Monday'
+		| 'Tuesday'
+		| 'Wednesday'
+		| 'Thursday'
+		| 'Friday'
+		| 'Saturday'
+		| 'Sunday'
 	events: {
 		id?: string
 		name: string

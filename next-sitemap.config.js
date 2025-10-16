@@ -10,4 +10,4 @@ module.exports = {
 			'https://example.com/my-custom-sitemap-3.xml',
 		],
 	},
-};
+}

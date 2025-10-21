@@ -44,18 +44,17 @@ const Coaches = () => {
 						Champion of the World, YGK Boxing is your club. We invite you to
 						surpass your expectations in this safe and encouraging space,
 						designed to bring out the best in everyone. &quot;Your Best Has Yet
-						To Be Unleashed&quot; is not just a motto—it&apos;s a guiding
+						To Be Unleashed&quot; is not just a motto, it&apos;s a guiding
 						principle that defines our shared journey towards empowerment and
 						excellence. Join YGK Boxing and embark on a path where your true
 						potential awaits.
 					</p>
 					<p className="mt-6 text-lg leading-8">
 						YGK Boxing's Head Coach is a Boxing Ontario Level 2 Certified Coach
-						with a highly accomplished background in boxing. Competing across
-						Canada and the United States, the coach has earned multiple Amatuer
-						Boxing Gold Medals in tournaments, including the Bronze Gloves,
-						Silver Gloves, the Carmen Basilio Quest for Champions, and the New
-						York State Fair Tournament.
+						and Level 1 Boxing Referee with a highly accomplished background in
+						boxing. Competing across Canada and the United States, training
+						around the world, the coach has earned multiple Amateur Boxing Gold
+						Medals in tournaments.
 					</p>
 					<p className="mt-6 text-lg leading-8">
 						In addition to a successful competitive career, the coach has played

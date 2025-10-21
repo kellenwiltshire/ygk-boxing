@@ -14,7 +14,7 @@ export default function BoxingKids() {
 			</p>
 
 			<p className="mt-6 text-center text-xl/8">
-				Classes are designed to be safe, fun, and challenging — helping kids
+				Classes are designed to be safe, fun, and challenging, helping kids
 				build confidence, improve fitness, and learn the core values of boxing:
 				<strong>discipline, respect, and perseverance.</strong> Whether your
 				child is trying boxing for the first time or looking to sharpen their
@@ -23,9 +23,6 @@ export default function BoxingKids() {
 			</p>
 			<section className="mx-auto max-w-4xl px-6 py-10">
 				<div className="mb-2 flex items-center gap-2 text-3xl font-semibold text-white">
-					<span role="img" aria-label="Boxing Glove">
-						🥊
-					</span>
 					YGK BOXING KIDS (Ages 7–12)
 				</div>
 
@@ -40,7 +37,7 @@ export default function BoxingKids() {
 				</p>
 
 				<div className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-					✅ What’s Included:
+					What’s Included:
 				</div>
 
 				<div className="mb-6">
@@ -69,20 +66,17 @@ export default function BoxingKids() {
 			</section>
 			<section className="mx-auto max-w-4xl px-6 py-10">
 				<div className="mb-4 flex items-center gap-2 text-3xl font-semibold text-white">
-					<span role="img" aria-label="Shield">
-						🛡️
-					</span>
 					What About Sparring?
 				</div>
 
 				<p className="mb-6 text-gray-100">
 					At <span className="font-semibold">YGK Boxing</span>, sparring is{' '}
-					<span className="font-semibold">not required</span>—but we do offer a
+					<span className="font-semibold">not required</span> but we do offer a
 					clear path for kids who express an interest in it.
 				</p>
 
 				<p className="mb-6 text-gray-100">
-					We only allow kids to begin sparring when they are truly ready—which
+					We only allow kids to begin sparring when they are truly ready which
 					means:
 				</p>
 
@@ -102,7 +96,7 @@ export default function BoxingKids() {
 				</p>
 
 				<p className="mb-6 text-gray-100">
-					No child is rushed—our coaches will work closely with each individual
+					No child is rushed, our coaches will work closely with each individual
 					to ensure they’re prepared both mentally and physically before
 					stepping into sparring.
 				</p>
@@ -114,9 +108,6 @@ export default function BoxingKids() {
 			</section>
 			<section className="mx-auto max-w-4xl px-6 py-10">
 				<div className="mb-2 flex items-center gap-2 text-3xl font-semibold text-white">
-					<span role="img" aria-label="Trophy">
-						🥇
-					</span>
 					YGK BOXING LITTLE CHAMPS (Ages 4–7)
 				</div>
 
@@ -131,7 +122,7 @@ export default function BoxingKids() {
 				</p>
 
 				<div className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-					✅ What to Expect:
+					What to Expect:
 				</div>
 
 				<ul className="mb-6 ml-4 list-inside list-disc space-y-2 text-gray-100">
@@ -162,22 +153,19 @@ export default function BoxingKids() {
 				<p className="mb-6 text-gray-100">
 					This class is all about{' '}
 					<span className="font-semibold">fun, movement, bonding</span>, and
-					building the foundation for a healthy and active lifestyle—
+					building the foundation for a healthy and active lifestyle
 					<span className="font-semibold">together</span>.
 				</p>
 
 				<div className="mb-2 flex items-center gap-2 text-lg font-semibold text-white">
-					<span role="img" aria-label="Chat bubble">
-						💬
-					</span>
 					Get Started Today!
 				</div>
 
 				<p className="text-gray-100">
 					Whether your child is just starting out or ready to take things to the
 					next level, <span className="font-semibold">YGK Boxing</span> has a
-					place for them. Contact us to learn more or sign up for a class
-					today—we’d love to have you and your little champ in the gym!
+					place for them. Contact us to learn more or sign up for a class today,
+					we’d love to have you and your little champ in the gym!
 				</p>
 			</section>
 		</div>

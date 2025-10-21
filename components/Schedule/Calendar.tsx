@@ -44,10 +44,11 @@ const Calendar = () => {
 											<li
 												className={`${event.id != null ? 'cursor-pointer underline' : ''}`}
 												onClick={() => {
-													event.id != null &&
-														router
-															.push(`/schedule#${event.id}`)
-															.catch((err) => console.log(err))
+													event.id != null && event.id === 'KIDS'
+														? router.push('ygkboxingkids')
+														: router
+																.push(`/schedule#${event.id}`)
+																.catch((err) => console.log(err))
 												}}
 												key={event.name}
 											>

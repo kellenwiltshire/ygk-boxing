@@ -19,6 +19,7 @@ export const events: Array<IDay> = [
 				time: '7:00am - 3:30pm',
 			},
 			{
+				id: 'KIDS',
 				name: 'KIDS CLASS (AGE: 7-12)',
 				time: '4:30pm - 5:45pm',
 			},
@@ -97,6 +98,7 @@ export const events: Array<IDay> = [
 				time: '7:00am - 3:30pm',
 			},
 			{
+				id: 'KIDS',
 				name: 'KIDS CLASS (AGE: 7-12)',
 				time: '4:30pm - 5:45pm',
 			},
@@ -158,7 +160,7 @@ export const events: Array<IDay> = [
 			{
 				id: 'YGKKIDS',
 				name: 'LITTLE CHAMPS PARENT CHILD BOXING (AGE: 4-7)',
-				time: '10:30am - 11:30am',
+				time: '10:30am - 11:00am',
 			},
 		],
 	},

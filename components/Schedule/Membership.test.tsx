@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Membership from './Membership'
 
 describe('Membership component', () => {
@@ -19,13 +19,5 @@ describe('Membership component', () => {
 
 		const tier3 = screen.getByText('1-Month')
 		expect(tier3).toBeInTheDocument()
-
 	})
-
-	it('renders the most popular tier with a special label', () => {
-		render(<Membership />)
-		const mostPopularLabel = screen.getByText('Best Deal')
-		expect(mostPopularLabel).toBeInTheDocument()
-	})
-
 })

@@ -1,8 +1,7 @@
-import { Client, Environment } from "square";
+import { SquareClient } from 'square'
 
-const client = new Client({
-  accessToken: process.env.SQUARE_ACCESS_TOKEN,
-  environment: Environment.Production
-});
+const client = new SquareClient({
+	token: process.env.SQUARE_ACCESS_TOKEN,
+})
 
-export default client;
+export default client

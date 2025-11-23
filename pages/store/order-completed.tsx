@@ -1,10 +1,8 @@
-import React from "react";
-import Completed from "../../components/Store/Completed";
+import React from 'react'
+import Completed from '../../components/Store/Completed'
 
 const OrderCompleted = () => {
-  return (
-    <Completed />
-  );
-};
+	return <Completed />
+}
 
-export default OrderCompleted;
+export default OrderCompleted

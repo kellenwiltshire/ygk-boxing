@@ -41,13 +41,7 @@ const Coaches = () => {
 						their confidence, strength, and boxing abilities but also forge
 						lasting friendships. Whether your aspirations are personal
 						development, a healthier lifestyle, or aspiring to become the next
-						Champion of the World, YGK Boxing is your club. We invite you to
-						surpass your expectations in this safe and encouraging space,
-						designed to bring out the best in everyone. &quot;Your Best Has Yet
-						To Be Unleashed&quot; is not just a motto, it&apos;s a guiding
-						principle that defines our shared journey towards empowerment and
-						excellence. Join YGK Boxing and embark on a path where your true
-						potential awaits.
+						Champion of the World, YGK Boxing is your club.
 					</p>
 					<p className="mt-6 text-lg leading-8">
 						YGK Boxing's Head Coach is a Boxing Ontario Level 2 Certified Coach
@@ -61,8 +55,7 @@ const Coaches = () => {
 						a key role in high-level fight preparation as a primary sparring
 						partner for several professional boxers and MMA fighters. This
 						hands-on experience at the elite level brings a unique edge to the
-						training environment combining technical precision with the
-						toughness and mindset needed to succeed in and out of the ring.
+						training environment.
 					</p>
 					<p className="mt-6 text-lg leading-8">
 						YGK Boxing is proud to work with a team of coaches that are seasoned

@@ -44,13 +44,15 @@ const Calendar = () => {
 											<li
 												className={`${event.id != null ? 'cursor-pointer underline' : ''}`}
 												onClick={() => {
-													event.id != null && event.id === 'KIDS'
-														? router.push('ygkboxingkids')
+													event.id !== null && event.id === 'KIDS'
+														? router
+																.push('ygkboxingkids')
+																.catch((err) => console.log(err))
 														: router
 																.push(`/schedule#${event.id}`)
 																.catch((err) => console.log(err))
 												}}
-												key={event.name}
+												key={`${event.name}+${event.time}`}
 											>
 												<div className="group flex flex-col">
 													<time

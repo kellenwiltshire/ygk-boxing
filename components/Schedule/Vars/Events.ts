@@ -16,7 +16,7 @@ export const events: Array<IDay> = [
 			{
 				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM BOXING TRAINING',
-				time: '7:00am - 3:30pm',
+				time: '8:00am - 3:30pm',
 			},
 			{
 				id: 'KIDS',
@@ -24,6 +24,7 @@ export const events: Array<IDay> = [
 				time: '4:30pm - 5:45pm',
 			},
 			{
+				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM TRAINING',
 				time: '5:45pm - 6:15pm',
 			},
@@ -45,7 +46,7 @@ export const events: Array<IDay> = [
 			{
 				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM BOXING TRAINING',
-				time: '7:00am - 3:30pm',
+				time: '8:00am - 3:30pm',
 			},
 			{
 				id: 'BEGINNERS',
@@ -75,7 +76,7 @@ export const events: Array<IDay> = [
 			{
 				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM BOXING TRAINING',
-				time: '7:00am - 4:00pm',
+				time: '8:00am - 4:00pm',
 			},
 			{
 				id: 'SPARRING',
@@ -95,7 +96,7 @@ export const events: Array<IDay> = [
 			{
 				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM BOXING TRAINING',
-				time: '7:00am - 3:30pm',
+				time: '8:00am - 3:30pm',
 			},
 			{
 				id: 'KIDS',
@@ -103,6 +104,7 @@ export const events: Array<IDay> = [
 				time: '4:30pm - 5:45pm',
 			},
 			{
+				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM TRAINING',
 				time: '5:45pm - 6:15pm',
 			},
@@ -124,7 +126,7 @@ export const events: Array<IDay> = [
 			{
 				id: 'OPENGYM',
 				name: 'ALL LEVELS OPEN GYM BOXING TRAINING',
-				time: '7:00am - 3:30pm',
+				time: '8:00am - 3:30pm',
 			},
 
 			{

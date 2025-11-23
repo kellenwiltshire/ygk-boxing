@@ -6,14 +6,14 @@ export default function FAQ() {
 	return (
 		<div>
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
-				<div className="mx-auto max-w-4xl divide-y divide-white/10">
+				<div className="mx-auto max-w-4xl">
 					<div className="mx-auto max-w-4xl pt-4 text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 							Frequently Asked Questions
 						</h2>
 					</div>
 
-					<dl className="mt-10 space-y-6 divide-y divide-white/10">
+					<dl className="mt-10 space-y-6">
 						{faqItems.map((faq) => (
 							<Disclosure as="div" key={faq.question} className="pt-6">
 								{({ open }) => (

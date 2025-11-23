@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import kids1 from '../../public/pictures/kids/kids-1.webp'
-import kids2 from '../../public/pictures/kids/kids-2.webp'
 import kids3 from '../../public/pictures/kids/kids-3.webp'
 import kids4 from '../../public/pictures/kids/kids-4.webp'
-import kids5 from '../../public/pictures/kids/kids-5.webp'
 import kids6 from '../../public/pictures/kids/kids-6.webp'
 import kids7 from '../../public/pictures/kids/kids-7.webp'
 
@@ -16,7 +14,7 @@ export default function BoxingKids() {
 			<div className="flex w-full justify-center px-3 py-5 pb-2">
 				<Image
 					key="image-1"
-					src={kids1}
+					src={kids3}
 					alt="YGK Boxing"
 					width={500}
 					height={500}
@@ -41,7 +39,7 @@ export default function BoxingKids() {
 			<div className="flex w-full justify-center px-3 py-5">
 				<Image
 					key="image-1"
-					src={kids2}
+					src={kids4}
 					alt="YGK Boxing"
 					width={500}
 					height={500}
@@ -92,10 +90,10 @@ export default function BoxingKids() {
 					</ul>
 				</div>
 			</section>
-			<div className="flex w-full justify-center px-3 py-5">
+			<div className="flex w-full justify-center px-3 py-5 pb-2">
 				<Image
-					key="image-2"
-					src={kids3}
+					key="image-1"
+					src={kids1}
 					alt="YGK Boxing"
 					width={500}
 					height={500}
@@ -147,7 +145,7 @@ export default function BoxingKids() {
 			<div className="flex w-full justify-center px-3 py-5">
 				<Image
 					key="image-3"
-					src={kids4}
+					src={kids6}
 					alt="YGK Boxing"
 					width={500}
 					height={500}
@@ -187,26 +185,6 @@ export default function BoxingKids() {
 					we’d love to have you and your little champ in the gym!
 				</p>
 			</section>
-			<div className="grid max-w-7xl grid-cols-2 gap-4 px-2 pb-4 md:grid-cols-4">
-				<Image
-					key="image-5"
-					src={kids5}
-					alt="YGK Boxing"
-					className="rounded-lg object-cover object-center"
-				/>
-				<Image
-					key="image-6"
-					src={kids6}
-					alt="YGK Boxing"
-					className="rounded-lg object-cover object-center"
-				/>
-				<Image
-					key="image-7"
-					src={kids7}
-					alt="YGK Boxing"
-					className="rounded-lg object-cover object-center"
-				/>
-			</div>
 		</div>
 	)
 }

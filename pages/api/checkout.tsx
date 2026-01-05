@@ -1,14 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import client from '../../square.connect'
 import { ICartItems } from '../../redux/cartSlice'
-import JSONBig from 'json-bigint'
 import { randomUUID } from 'crypto'
-import { Currency, OrderLineItem } from 'square/api'
+import { Currency, OrderLineItem, PaymentLink } from 'square/api'
 
 export default async function Checkout(
 	req: NextApiRequest,
-	res: NextApiResponse,
+	res: NextApiResponse<PaymentLink>,
 ) {
+	console.log('HERE')
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const items: Array<ICartItems> = req.body
 	const locationId = '3K1HJD5MWBAFJ'
@@ -26,7 +26,7 @@ export default async function Checkout(
 	})
 
 	try {
-		await client.checkout.paymentLinks.create({
+		const response = await client.checkout.paymentLinks.create({
 			idempotencyKey: randomUUID(),
 			order: {
 				locationId: locationId,
@@ -47,6 +47,9 @@ export default async function Checkout(
 				redirectUrl: 'https://ygkboxing.com/store/order-completed',
 			},
 		})
+		if (response?.paymentLink) {
+			res.status(200).json(response.paymentLink)
+		}
 	} catch (error) {
 		console.log(error)
 	}

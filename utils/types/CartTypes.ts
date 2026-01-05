@@ -1,11 +1,4 @@
-interface PaymentLink {
-	id: string
-	version: number
-	order_id: string
-	url: string
-	long_url: string
-	created_at: string
-}
+import { PaymentLink } from 'square/api'
 
 interface LineItem {
 	uid: string

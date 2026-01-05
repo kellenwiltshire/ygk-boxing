@@ -1,14 +1,17 @@
-import React, { Fragment, useMemo } from 'react'
+import React, { Fragment, useMemo, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ShoppingBagIcon } from '@heroicons/react/24/solid'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { ICartItems, removeFromCart } from '../../redux/cartSlice'
 import { calculatePrice } from '../../utils/helpers/calcPrice'
-import { ICartApiResponse } from '../../utils/types/CartTypes'
+import { PaymentLink } from 'square/api'
 
 const ShoppingCart = () => {
 	const { cart } = useAppSelector((state) => state)
 	const dispatch = useAppDispatch()
+
+	const [error, setError] = useState(false)
+	const [loading, setLoading] = useState(false)
 
 	const totalCost = useMemo(() => {
 		return cart.items.reduce((acc, curr) => {
@@ -21,6 +24,7 @@ const ShoppingCart = () => {
 	}
 
 	const submitCheckout = (e: React.MouseEvent<HTMLButtonElement>) => {
+		setLoading(true)
 		e.preventDefault()
 		fetch('/api/checkout', {
 			method: 'POST',
@@ -36,12 +40,18 @@ const ShoppingCart = () => {
 					return result.json()
 				}
 			})
-			.then((data: ICartApiResponse) => {
-				window.location.href = data.paymentLink.url
+			.then((data: PaymentLink) => {
+				if (data.url) {
+					window.location.href = data.url
+				} else {
+					throw new Error('No Payment Link')
+				}
 			})
 			.catch((error) => {
+				setError(true)
 				console.log(error)
 			})
+			.finally(() => setLoading(false))
 	}
 
 	return (
@@ -85,7 +95,7 @@ const ShoppingCart = () => {
 										<p className="text-gray-500">Qty: {product.quantity}</p>
 										<button
 											onClick={() => removeItem(product.catalogObjectId)}
-											className="text-black"
+											className="cursor-pointer text-black"
 										>
 											Remove
 										</button>
@@ -102,9 +112,14 @@ const ShoppingCart = () => {
 							onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
 								submitCheckout(e)
 							}
-							className="w-full rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-none"
+							disabled={loading || error}
+							className="w-full cursor-pointer rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 focus:outline-none disabled:cursor-none disabled:bg-gray-500"
 						>
-							Checkout
+							{loading
+								? 'Please Wait...'
+								: error
+									? 'Error, try again later'
+									: 'Checkout'}
 						</button>
 					</form>
 				</Popover.Panel>

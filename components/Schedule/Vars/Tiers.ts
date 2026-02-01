@@ -17,12 +17,12 @@ export const tiers: Array<ITiers> = [
 		mostPopular: false,
 	},
 	{
-		name: '1-Year',
-		id: '1-year',
-		price: '$999.99',
+		name: '1-Month',
+		id: '1-month',
+		price: '$119.99',
 		description:
-			'Ready for the ultimate commitment? Save money and sign up for 1 year.',
-		mostPopular: true,
+		'Only around for a short while? 1 Month memberships are perfect for keeping up your skills!',
+		mostPopular: false,
 	},
 	{
 		name: '3-Months',
@@ -32,11 +32,11 @@ export const tiers: Array<ITiers> = [
 		mostPopular: false,
 	},
 	{
-		name: '1-Month',
-		id: '1-month',
-		price: '$119.99',
+		name: '1-Year',
+		id: '1-year',
+		price: '$999.99',
 		description:
-			'Only around for a short while? 1 Month memberships are perfect for keeping up your skills!',
-		mostPopular: false,
+			'Ready for the ultimate commitment? Save money and sign up for 1 year.',
+		mostPopular: true,
 	},
 ]
